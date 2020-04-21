@@ -4,6 +4,7 @@ import { getCustomRepository } from 'typeorm';
 
 import TransactionsRepository from '../repositories/TransactionsRepository';
 import CreateTransactionService from '../services/CreateTransactionService';
+import DeleteTransactionService from '../services/DeleteTransactionService';
 
 const transactionsRouter = Router();
 
@@ -32,6 +33,16 @@ transactionsRouter.post('/', async (req, res) => {
   });
 
   return res.json(transaction);
+});
+
+transactionsRouter.delete('/:id', async (req, res) => {
+  const { id } = req.params;
+
+  const deleteTransaction = new DeleteTransactionService();
+
+  await deleteTransaction.execute(id);
+
+  return res.status(204).send();
 });
 
 export default transactionsRouter;
