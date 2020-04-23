@@ -21,6 +21,7 @@
   },
   "plugins": ["@typescript-eslint", "prettier"],
   "rules": {
+    "array-callback-return": "off",
     "no-await-in-loop": "off",
     "no-restricted-syntax": "off",
     "no-underscore-dangle": "off",
