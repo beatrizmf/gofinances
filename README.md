@@ -90,5 +90,3 @@ yarn test
 ## ✍️ Authors <a name = "authors"></a>
 
 - [@beatrizf13](https://github.com/beatrizf13) - Idea & Initial work
-
-See also the list of [contributors](https://github.com/beatrizf13/gofinances/contributors) who participated in this project.
