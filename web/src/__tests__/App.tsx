@@ -6,15 +6,15 @@ jest.mock('../utils/formatValue.ts', () => ({
   default: jest.fn().mockImplementation((value: number) => {
     switch (value) {
       case 6000:
-        return 'R$ 6.000,00';
+        return '$ 6.000,00';
       case 50:
-        return 'R$ 50,00';
+        return '$ 50,00';
       case 5950:
-        return 'R$ 5.950,00';
+        return '$ 5.950,00';
       case 1500:
-        return 'R$ 1.500,00';
+        return '$ 1.500,00';
       case 4500:
-        return 'R$ 4.500,00';
+        return '$ 4.500,00';
       default:
         return '';
     }
@@ -100,11 +100,11 @@ describe('Dashboard', () => {
 
     await actWait();
 
-    expect(getByTestId('balance-income')).toHaveTextContent('R$ 6.000,00');
+    expect(getByTestId('balance-income')).toHaveTextContent('$ 6.000,00');
 
-    expect(getByTestId('balance-outcome')).toHaveTextContent('R$ 50,00');
+    expect(getByTestId('balance-outcome')).toHaveTextContent('$ 50,00');
 
-    expect(getByTestId('balance-total')).toHaveTextContent('R$ 5.950,00');
+    expect(getByTestId('balance-total')).toHaveTextContent('$ 5.950,00');
   });
 
   it('should be able to list the transactions', async () => {
@@ -168,15 +168,15 @@ describe('Dashboard', () => {
     await actWait();
 
     expect(getByText('Loan')).toBeTruthy();
-    expect(getByText('R$ 1.500,00')).toBeTruthy();
+    expect(getByText('$ 1.500,00')).toBeTruthy();
     expect(getByText('Others')).toBeTruthy();
 
     expect(getByText('Computer')).toBeTruthy();
-    expect(getByText('R$ 4.500,00')).toBeTruthy();
+    expect(getByText('$ 4.500,00')).toBeTruthy();
     expect(getByText('Sell')).toBeTruthy();
 
     expect(getByText('Website Hosting')).toBeTruthy();
-    expect(getByText('- R$ 50,00')).toBeTruthy();
+    expect(getByText('- $ 50,00')).toBeTruthy();
     expect(getByText('Hosting')).toBeTruthy();
   });
 
@@ -185,7 +185,7 @@ describe('Dashboard', () => {
 
     await actWait(500);
 
-    fireEvent.click(getByText('Importar'));
+    fireEvent.click(getByText('Import'));
 
     await actWait();
 
@@ -195,7 +195,7 @@ describe('Dashboard', () => {
   test('should be able to upload a file', async () => {
     const { getByText, getByTestId } = render(<App />);
 
-    fireEvent.click(getByText('Importar'));
+    fireEvent.click(getByText('Import'));
 
     await actWait();
 

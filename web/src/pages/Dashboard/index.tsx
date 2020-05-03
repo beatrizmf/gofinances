@@ -59,14 +59,14 @@ const Dashboard: React.FC = () => {
         <CardContainer>
           <Card>
             <header>
-              <p>Entradas</p>
+              <p>Income</p>
               <img src={income} alt="Income" />
             </header>
             <h1 data-testid="balance-income">{formatValue(balance?.income)}</h1>
           </Card>
           <Card>
             <header>
-              <p>Saídas</p>
+              <p>Outcome</p>
               <img src={outcome} alt="Outcome" />
             </header>
             <h1 data-testid="balance-outcome">
@@ -82,32 +82,34 @@ const Dashboard: React.FC = () => {
           </Card>
         </CardContainer>
 
-        <TableContainer>
-          <table>
-            <thead>
-              <tr>
-                <th>Título</th>
-                <th>Preço</th>
-                <th>Categoria</th>
-                <th>Data</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              {transactions?.map(transaction => (
-                <tr key={transaction.id}>
-                  <td className="title">{transaction.title}</td>
-                  <td className={transaction.type}>
-                    {transaction.type === 'outcome' ? '- ' : ''}
-                    {formatValue(transaction.value)}
-                  </td>
-                  <td>{transaction.category.title}</td>
-                  <td>{formatDate(transaction.created_at)}</td>
+        {transactions.length > 0 && (
+          <TableContainer>
+            <table>
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Price</th>
+                  <th>Tag</th>
+                  <th>Date</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </TableContainer>
+              </thead>
+
+              <tbody>
+                {transactions?.map(transaction => (
+                  <tr key={transaction.id}>
+                    <td className="title">{transaction.title}</td>
+                    <td className={transaction.type}>
+                      {transaction.type === 'outcome' ? '- ' : ''}
+                      {formatValue(transaction.value)}
+                    </td>
+                    <td>{transaction.category.title}</td>
+                    <td>{formatDate(transaction.created_at)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </TableContainer>
+        )}
       </Container>
     </>
   );
