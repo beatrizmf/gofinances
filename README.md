@@ -17,22 +17,17 @@
 
 ---
 
-<p align="center"> Few lines describing your project.
+<p align="center"> Control in your financial life. 💰
     <br> 
 </p>
 
 ## 📝 Table of Contents
 
-- [About](#about)
 - [Demo / Working](#demo)
 - [Getting Started](#getting_started)
 - [Running the tests](#tests)
 - [Built Using](#built_using)
 - [Authors](#authors)
-
-## 🧐 About <a name = "about"></a>
-
-Control in your financial life. 💰
 
 ## 🎥 Demo / Working <a name = "demo"></a>
 
