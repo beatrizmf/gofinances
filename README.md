@@ -9,7 +9,7 @@
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/beatrizf13/gofinances.svg)](https://github.com/beatrizf13/gofinances/issues)
+[![GitHub Issues](https://img.shields.io/github/issues/beatrizmf/gofinances.svg)](https://github.com/beatrizmf/gofinances/issues)
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/beatrizf13/gofinances.svg)](https://github.com/beatrizf13/gofinances/pulls)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
@@ -89,4 +89,4 @@ yarn test
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@beatrizf13](https://github.com/beatrizf13) - Idea & Initial work
+- [@beatrizmv](https://github.com/beatrizmf) 
